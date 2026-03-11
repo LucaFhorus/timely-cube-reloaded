@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c2nmewjksuoev"
+path="res://.godot/imported/slow-cinematic-clock-ticking-357979 (1).mp3-306d85a08dc4749616cb28efa511848f.mp3str"
+
+[deps]
+
+source_file="res://audio/sfx/clock_ticks/slow-cinematic-clock-ticking-357979 (1).mp3"
+dest_files=["res://.godot/imported/slow-cinematic-clock-ticking-357979 (1).mp3-306d85a08dc4749616cb28efa511848f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
