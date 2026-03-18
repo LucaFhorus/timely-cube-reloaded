@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @onready var death_sound = $AudioStreamPlayer
+@onready var animation : AnimatedSprite2D = $AnimatedSprite2D
 
 enum PLAYER_STATES {READY, DEPLETED}
 
@@ -15,6 +16,10 @@ func _ready() -> void:
 
 func _physics_process(_delta: float) -> void:
 	var input_direction = Input.get_vector("MOVE_LEFT","MOVE_RIGHT","MOVE_UP","MOVE_DOWN")
+	if input_direction:
+		animation.play()
+	else:
+		animation.stop()
 	velocity = input_direction * speed
 	position += velocity * _delta
 	position = position.clamp(Vector2.ZERO + player_size / 2, screen_size - player_size / 2)
