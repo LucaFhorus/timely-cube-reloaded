@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://dqj16i4gftd2q"]
+[gd_scene format=3 uid="uid://dqj16i4gftd2q"]
 
 [ext_resource type="Script" uid="uid://bsf4fwo4y40n4" path="res://scripts/game.gd" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://dhdapp6lw0qhw" path="res://scenes/player.tscn" id="1_uwrxv"]
+[ext_resource type="Texture2D" uid="uid://bcjjgh0xcd4vl" path="res://art/background_arena_small.png" id="2_dinhu"]
 [ext_resource type="PackedScene" uid="uid://dlgitg3axnrek" path="res://scenes/platform.tscn" id="2_yqjtg"]
 [ext_resource type="AudioStream" uid="uid://fy4xe3k0kt8x" path="res://audio/sfx/zaowlrd.mp3" id="4_lbhrr"]
 [ext_resource type="AudioStream" uid="uid://xegf661hdd1r" path="res://audio/sfx/star-platinum-za-warudo-star-platinum-the-world-time-resume_Vr8OMdD.mp3" id="5_iywne"]
@@ -20,13 +21,14 @@ stream_2/stream = ExtResource("8_dinhu")
 stream_3/stream = ExtResource("9_kvuet")
 stream_4/stream = ExtResource("10_trtic")
 
-[node name="Game" type="Node"]
+[node name="Game" type="Node" unique_id=974034665]
 script = ExtResource("1_lnu2h")
 
-[node name="Background" type="CanvasLayer" parent="."]
+[node name="Background" type="CanvasLayer" parent="." unique_id=2102345586]
 layer = -10
 
-[node name="ColorRect" type="ColorRect" parent="Background"]
+[node name="ColorRect" type="ColorRect" parent="Background" unique_id=1515174132]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -34,56 +36,61 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.31, 0.1922, 0.28055, 1)
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="TextureRect" type="TextureRect" parent="Background" unique_id=1186984204]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_dinhu")
 
-[node name="Player" parent="." instance=ExtResource("1_uwrxv")]
-position = Vector2(473, 454)
-
-[node name="Platform" parent="." instance=ExtResource("2_yqjtg")]
-
-[node name="StartPoint" type="Marker2D" parent="."]
-position = Vector2(960, 200)
-
-[node name="EndPoint" type="Marker2D" parent="."]
-position = Vector2(960, 880)
-
-[node name="SpawnLocation" type="Marker2D" parent="."]
-position = Vector2(250, 540)
-
-[node name="PrizeLocation" type="Marker2D" parent="."]
-position = Vector2(1670, 540)
-
-[node name="CenterContainer" type="CenterContainer" parent="."]
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=711153784]
 visible = false
 offset_right = 69.0
 offset_bottom = 49.0
 size_flags_horizontal = 4
 use_top_left = true
 
-[node name="LabelTip" type="Label" parent="CenterContainer"]
+[node name="LabelTip" type="Label" parent="CenterContainer" unique_id=1631838470]
 layout_mode = 2
 text = "Try to
 press \"E\""
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Audio" type="Node" parent="."]
+[node name="Node2D" type="Node2D" parent="." unique_id=483107518]
 
-[node name="ZaWarudoSoundEffect" type="AudioStreamPlayer" parent="Audio"]
+[node name="Player" parent="." unique_id=1760801478 instance=ExtResource("1_uwrxv")]
+position = Vector2(473, 454)
+
+[node name="Platform" parent="." unique_id=1371314818 instance=ExtResource("2_yqjtg")]
+
+[node name="StartPoint" type="Marker2D" parent="." unique_id=599500423]
+position = Vector2(960, 200)
+
+[node name="EndPoint" type="Marker2D" parent="." unique_id=1708977629]
+position = Vector2(960, 880)
+
+[node name="SpawnLocation" type="Marker2D" parent="." unique_id=219326484]
+position = Vector2(250, 540)
+
+[node name="PrizeLocation" type="Marker2D" parent="." unique_id=1928443634]
+position = Vector2(1670, 540)
+
+[node name="Audio" type="Node" parent="." unique_id=50680354]
+
+[node name="ZaWarudoSoundEffect" type="AudioStreamPlayer" parent="Audio" unique_id=616981050]
 stream = ExtResource("4_lbhrr")
 
-[node name="ZaWarudoEndSoundEffect" type="AudioStreamPlayer" parent="Audio"]
+[node name="ZaWarudoEndSoundEffect" type="AudioStreamPlayer" parent="Audio" unique_id=61441800]
 stream = ExtResource("5_iywne")
 
-[node name="ClockSoundEffect" type="AudioStreamPlayer" parent="Audio"]
+[node name="ClockSoundEffect" type="AudioStreamPlayer" parent="Audio" unique_id=1450845504]
 stream = SubResource("AudioStreamRandomizer_ir15t")
 
-[node name="Timers" type="Node" parent="."]
+[node name="Timers" type="Node" parent="." unique_id=304122454]
 
-[node name="ZaWarudoTimer" type="Timer" parent="Timers"]
+[node name="ZaWarudoTimer" type="Timer" parent="Timers" unique_id=549139810]
 wait_time = 5.0
 one_shot = true
 
-[node name="ClockSoundTimer" type="Timer" parent="Timers"]
+[node name="ClockSoundTimer" type="Timer" parent="Timers" unique_id=142245470]
 
-[node name="Prize" parent="." instance=ExtResource("11_kvpfn")]
+[node name="Prize" parent="." unique_id=2134788501 instance=ExtResource("11_kvpfn")]

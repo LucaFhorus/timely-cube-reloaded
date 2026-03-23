@@ -22,7 +22,7 @@ func _physics_process(_delta: float) -> void:
 		animation.stop()
 	velocity = input_direction * speed
 	position += velocity * _delta
-	position = position.clamp(Vector2.ZERO + player_size / 2, screen_size - player_size / 2)
+	position = position.clamp(Vector2.ZERO + player_size / 2 + Vector2(100,100), screen_size - player_size / 2 - Vector2(100,100))
 
 
 func _input(event: InputEvent) -> void:
