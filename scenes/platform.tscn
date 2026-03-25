@@ -1,23 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://dlgitg3axnrek"]
+[gd_scene format=3 uid="uid://dlgitg3axnrek"]
 
 [ext_resource type="Script" uid="uid://b2qlm527dv2d6" path="res://scripts/platform.gd" id="1_ba0x2"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_v4t87"]
-size = Vector3(100, 400, 1)
+[ext_resource type="Texture2D" uid="uid://lp2753foy1vm" path="res://art/platform_paint.png" id="2_nlgqw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v4t87"]
 size = Vector2(100, 400)
 
-[node name="Platform" type="Area2D"]
+[node name="Platform" type="Area2D" unique_id=1420807471]
 script = ExtResource("1_ba0x2")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
-mesh = SubResource("BoxMesh_v4t87")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1384297417]
 shape = SubResource("RectangleShape2D_v4t87")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1497382764]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -34,3 +29,6 @@ theme_override_font_sizes/font_size = 16
 text = "PLATFORM"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1724841248]
+texture = ExtResource("2_nlgqw")

@@ -1,21 +1,32 @@
-[gd_scene load_steps=3 format=3 uid="uid://b61w1i0ygocav"]
+[gd_scene format=3 uid="uid://b61w1i0ygocav"]
+
+[ext_resource type="Texture2D" uid="uid://cdvfxsfhat12c" path="res://art/prize_paint.png" id="1_tcqfb"]
+[ext_resource type="Texture2D" uid="uid://b4tagnk4jyjrx" path="res://art/prize_paint_2.png" id="2_aqsxr"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xw4nr"]
 radius = 100.0
 
-[sub_resource type="SphereMesh" id="SphereMesh_xw4nr"]
-radius = 100.0
-height = 200.0
+[sub_resource type="SpriteFrames" id="SpriteFrames_8lf8u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_tcqfb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_aqsxr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
-[node name="Prize" type="Area2D"]
+[node name="Prize" type="Area2D" unique_id=322232997]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1027338929]
 shape = SubResource("CircleShape2D_xw4nr")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
-mesh = SubResource("SphereMesh_xw4nr")
-
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=401710105]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -30,3 +41,8 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 text = "PRIZE"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=202172913]
+sprite_frames = SubResource("SpriteFrames_8lf8u")
+autoplay = "default"
+frame_progress = 0.60870796
