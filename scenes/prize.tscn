@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://b61w1i0ygocav"]
 
-[ext_resource type="Texture2D" uid="uid://cdvfxsfhat12c" path="res://art/prize_paint.png" id="1_tcqfb"]
-[ext_resource type="Texture2D" uid="uid://b4tagnk4jyjrx" path="res://art/prize_paint_2.png" id="2_aqsxr"]
+[ext_resource type="Texture2D" uid="uid://oihlv6lash36" path="res://art/vector/prize/prize_vector_1.png" id="1_aqsxr"]
+[ext_resource type="Texture2D" uid="uid://b38wgybqx1exv" path="res://art/vector/prize/prize_vector_2.png" id="2_8lf8u"]
+[ext_resource type="Texture2D" uid="uid://fix276r8vmlv" path="res://art/vector/prize/prize_vector_3.png" id="3_1qmlp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xw4nr"]
 radius = 100.0
@@ -10,10 +11,13 @@ radius = 100.0
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_tcqfb")
+"texture": ExtResource("1_aqsxr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_aqsxr")
+"texture": ExtResource("2_8lf8u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1qmlp")
 }],
 "loop": true,
 "name": &"default",
@@ -45,4 +49,5 @@ text = "PRIZE"
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=202172913]
 sprite_frames = SubResource("SpriteFrames_8lf8u")
 autoplay = "default"
-frame_progress = 0.60870796
+frame = 2
+frame_progress = 0.5540431

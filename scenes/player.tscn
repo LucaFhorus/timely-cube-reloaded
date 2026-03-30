@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" uid="uid://j7jdln5m70wa" path="res://scripts/player.gd" id="1_3vyb7"]
 [ext_resource type="AudioStream" uid="uid://dtlyicpt4y72g" path="res://audio/sfx/lego-yoda-death-sound-effect.mp3" id="2_g2els"]
-[ext_resource type="Texture2D" uid="uid://b55wtcr1jjg8v" path="res://art/stickman_spritesheet_transparent.png" id="3_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://cuh7kubyk77rp" path="res://art/vector/Player/Player_1.png" id="3_qlg0r"]
+[ext_resource type="Texture2D" uid="uid://chklw8xajye8y" path="res://art/vector/Player/Player_2.png" id="4_tuyoq"]
+[ext_resource type="Texture2D" uid="uid://bwgo2akbnc7o8" path="res://art/vector/Player/Player_3.png" id="5_fjrip"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u8vuu"]
 size = Vector2(100, 100)
@@ -10,36 +12,17 @@ size = Vector2(100, 100)
 [sub_resource type="BoxMesh" id="BoxMesh_u8vuu"]
 size = Vector3(100, 100, 1)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
-atlas = ExtResource("3_qhqgy")
-region = Rect2(0, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
-atlas = ExtResource("3_qhqgy")
-region = Rect2(128, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
-atlas = ExtResource("3_qhqgy")
-region = Rect2(0, 128, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fjrip"]
-atlas = ExtResource("3_qhqgy")
-region = Rect2(128, 128, 128, 128)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_smehm"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_dqkch")
+"texture": ExtResource("3_qlg0r")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qlg0r")
+"texture": ExtResource("4_tuyoq")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_tuyoq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fjrip")
+"texture": ExtResource("5_fjrip")
 }],
 "loop": true,
 "name": &"walk",
@@ -80,4 +63,4 @@ stream = ExtResource("2_g2els")
 sprite_frames = SubResource("SpriteFrames_smehm")
 animation = &"walk"
 frame = 1
-frame_progress = 0.7309929
+frame_progress = 0.10486636

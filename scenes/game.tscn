@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bsf4fwo4y40n4" path="res://scripts/game.gd" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://dhdapp6lw0qhw" path="res://scenes/player.tscn" id="1_uwrxv"]
-[ext_resource type="Texture2D" uid="uid://bcjjgh0xcd4vl" path="res://art/background_arena_small.png" id="2_dinhu"]
+[ext_resource type="Texture2D" uid="uid://boe2cs38lqe0x" path="res://art/vector/background_arena.png" id="2_dinhu"]
 [ext_resource type="PackedScene" uid="uid://dlgitg3axnrek" path="res://scenes/platform.tscn" id="2_yqjtg"]
 [ext_resource type="AudioStream" uid="uid://fy4xe3k0kt8x" path="res://audio/sfx/zaowlrd.mp3" id="4_lbhrr"]
 [ext_resource type="AudioStream" uid="uid://xegf661hdd1r" path="res://audio/sfx/star-platinum-za-warudo-star-platinum-the-world-time-resume_Vr8OMdD.mp3" id="5_iywne"]
